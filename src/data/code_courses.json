@@ -1,0 +1,55 @@
+{
+   "courses": [
+     {
+       "id": 1,
+       "title": "game development",
+       "slug": "game development",
+       "description": "lorem ipsum",
+       "price": "99.99",
+       "instructor": "male",
+       "isFeatured": true,
+       "images": "code.png"
+     },
+     {
+       "id": 2,
+       "title": "game development",
+       "slug": "game development",
+       "description": "lorem ipsum",
+       "price": "99.99",
+       "instructor": "male",
+       "isFeatured": false,
+       "images": "code.png"
+     },
+     {
+       "id": 3,
+       "title": "game development",
+       "slug": "game development",
+       "description": "lorem ipsum",
+       "price": "99.99",
+       "instructor": "male",
+       "isFeatured": true,
+       "images": "code.png"
+     },
+     {
+       "id": 4,
+       "title": "game development",
+       "slug": "game development",
+       "description": "lorem ipsum",
+       "price": "99.99",
+       "instructor": "male",
+       "isFeatured": false,
+       "images": "code.png"
+     },
+     {
+       "id": 5,
+       "title": "game development",
+       "slug": "game development",
+       "description": "lorem ipsum",
+       "price": "99.99",
+       "instructor": "male",
+       "isFeatured": true,
+       "images": "code.png"
+     }
+   ]
+ }
+ 
