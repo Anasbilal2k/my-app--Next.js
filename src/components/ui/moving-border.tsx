@@ -12,12 +12,12 @@ import { cn } from "@/lib/utils";
 interface ButtonProps {
   borderRadius?: string;
   children: React.ReactNode;
-  as?: React.ElementType; // Kept 'React.ElementType'
+  as?: React.ElementType; // React ElementType for the 'as' prop
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
   className?: string;
-  [key: string]: any; // Changed to 'any' to allow for broader props, including 'as'
+  [key: string]: unknown; // Use 'unknown' instead of 'any'
 }
 
 export function Button({
@@ -75,7 +75,7 @@ interface MovingBorderProps {
   duration?: number;
   rx?: string;
   ry?: string;
-  [key: string]: any; // Changed to 'any' to allow for broader props
+  [key: string]: unknown; // Use 'unknown' instead of 'any'
 }
 
 export const MovingBorder = ({
