@@ -24,7 +24,7 @@ export const WavyBackground = ({
   blur?: number;
   speed?: "slow" | "fast";
   waveOpacity?: number;
-  [key: string]: any; // If you still want to allow arbitrary props
+  [key: string]: unknown; // If you still want to allow arbitrary props
 }) => {
   const noise = createNoise3D();
   
@@ -108,6 +108,7 @@ export const WavyBackground = ({
          cancelAnimationFrame(animationId); // Cancel only if animationId is set
        }
      };
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [animationId]); // Include animationId in the dependency array
 
    const [isSafari, setIsSafari] = useState(false);
