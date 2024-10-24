@@ -40,6 +40,10 @@ const instructors = [
   },
 ];
 
+// Ensure that each name is used only once by filtering duplicates
+const uniqueInstructors = Array.from(new Set(instructors.map(instructor => instructor.name)))
+  .map(name => instructors.find(instructor => instructor.name === name));
+
 function Instructors() {
   return (
     <div className="relative h-[40rem] overflow-hidden flex items-center justify-center">
@@ -51,18 +55,20 @@ function Instructors() {
           Discover the talented professionals who will guide you through your journey.
         </p>
         <div className="flex flex-wrap justify-center gap-8">
-          {instructors.map((instructor) => (
-            <div key={instructor.id} className="flex flex-col items-center">
-              <Image
-                src={instructor.image}
-                alt={instructor.name}
-                width={150}
-                height={150}
-                className="rounded-full"
-              />
-              <h3 className="text-lg text-white mt-4">{instructor.name}</h3>
-              <p className="text-sm text-gray-300">{instructor.designation}</p>
-            </div>
+          {uniqueInstructors.map((instructor) => (
+            instructor && ( // Ensure instructor is not undefined
+              <div key={instructor.id} className="flex flex-col items-center">
+                <Image
+                  src={instructor.image || "/images/default.jpg"} // Provide a fallback image
+                  alt={instructor.name || "Instructor"} // Provide a fallback alt text
+                  width={150}
+                  height={150}
+                  className="rounded-full"
+                />
+                <h3 className="text-lg text-white mt-4">{instructor.name}</h3>
+                <p className="text-sm text-gray-300">{instructor.designation}</p>
+              </div>
+            )
           ))}
         </div>
       </WavyBackground>
