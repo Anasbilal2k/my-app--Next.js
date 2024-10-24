@@ -1,55 +1,54 @@
 {
-   "courses": [
-     {
-       "id": 1,
-       "title": "game development",
-       "slug": "game development",
-       "description": "lorem ipsum",
-       "price": "99.99",
-       "instructor": "male",
-       "isFeatured": true,
-       "images": "code.png"
-     },
-     {
-       "id": 2,
-       "title": "game development",
-       "slug": "game development",
-       "description": "lorem ipsum",
-       "price": "99.99",
-       "instructor": "male",
-       "isFeatured": false,
-       "images": "code.png"
-     },
-     {
-       "id": 3,
-       "title": "game development",
-       "slug": "game development",
-       "description": "lorem ipsum",
-       "price": "99.99",
-       "instructor": "male",
-       "isFeatured": true,
-       "images": "code.png"
-     },
-     {
-       "id": 4,
-       "title": "game development",
-       "slug": "game development",
-       "description": "lorem ipsum",
-       "price": "99.99",
-       "instructor": "male",
-       "isFeatured": false,
-       "images": "code.png"
-     },
-     {
-       "id": 5,
-       "title": "game development",
-       "slug": "game development",
-       "description": "lorem ipsum",
-       "price": "99.99",
-       "instructor": "male",
-       "isFeatured": true,
-       "images": "code.png"
-     }
-   ]
- }
- 
+  "courses": [
+    {
+      "id": 1,
+      "title": "Introduction to Web Development",
+      "slug": "web-development",
+      "description": "Learn the basics of HTML, CSS, and JavaScript to build and style your own websites.",
+      "price": "49.99",
+      "instructor": "John Doe",
+      "isFeatured": true,
+      "images": "web-development.png"
+    },
+    {
+      "id": 2,
+      "title": "Advanced JavaScript",
+      "slug": "advanced-javascript",
+      "description": "Master advanced JavaScript concepts, including ES6+ features, closures, and async programming.",
+      "price": "79.99",
+      "instructor": "Jane Smith",
+      "isFeatured": false,
+      "images": "javascript.png"
+    },
+    {
+      "id": 3,
+      "title": "React for Beginners",
+      "slug": "react-beginners",
+      "description": "Get started with React and build dynamic single-page applications with this popular JavaScript library.",
+      "price": "59.99",
+      "instructor": "Alex Johnson",
+      "isFeatured": true,
+      "images": "react.png"
+    },
+    {
+      "id": 4,
+      "title": "Full-Stack Web Development",
+      "slug": "full-stack-development",
+      "description": "Learn both frontend and backend development to become a full-stack web developer using Node.js, Express, and MongoDB.",
+      "price": "129.99",
+      "instructor": "Emily Davis",
+      "isFeatured": false,
+      "images": "full-stack.png"
+    },
+    {
+      "id": 5,
+      "title": "Introduction to Python Programming",
+      "slug": "python-programming",
+      "description": "Learn Python from scratch, covering syntax, data structures, and basic algorithms.",
+      "price": "39.99",
+      "instructor": "Michael Brown",
+      "isFeatured": true,
+      "images": "python.png"
+    }
+  ]
+}
