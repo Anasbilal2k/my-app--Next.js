@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { WavyBackground } from "./ui/wavy-background";
 
 const instructors = [
@@ -6,37 +5,31 @@ const instructors = [
     id: 1,
     name: "Alice Johnson",
     designation: "Senior Software Engineer",
-    image: "/images/alice-johnson.jpg",
   },
   {
     id: 2,
     name: "Brian Smith",
     designation: "Frontend Developer",
-    image: "/images/brian-smith.jpg",
   },
   {
     id: 3,
     name: "Catherine Lee",
     designation: "Backend Developer",
-    image: "/images/catherine-lee.jpg",
   },
   {
     id: 4,
     name: "David Kim",
     designation: "Full Stack Developer",
-    image: "/images/david-kim.jpg",
   },
   {
     id: 5,
     name: "Emily Davis",
     designation: "UI/UX Designer",
-    image: "/images/emily-davis.jpg",
   },
   {
     id: 6,
     name: "Frank Thompson",
     designation: "DevOps Engineer",
-    image: "/images/frank-thompson.jpg",
   },
 ];
 
@@ -58,13 +51,7 @@ function Instructors() {
           {uniqueInstructors.map((instructor) => (
             instructor && ( // Ensure instructor is not undefined
               <div key={instructor.id} className="flex flex-col items-center">
-                <Image
-                  src={instructor.image || "/images/default.jpg"} // Provide a fallback image
-                  alt={instructor.name || "Instructor"} // Provide a fallback alt text
-                  width={150}
-                  height={150}
-                  className="rounded-full"
-                />
+                {/* Removed Image component */}
                 <h3 className="text-lg text-white mt-4">{instructor.name}</h3>
                 <p className="text-sm text-gray-300">{instructor.designation}</p>
               </div>
