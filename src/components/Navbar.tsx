@@ -28,7 +28,7 @@ function Navbar({ className }: { className?: string }): JSX.Element {
         </MenuItem>
 
         <MenuItem setActive={setActive} active={active} item="Contact">
-          <Link href="/contact" onClick={() => setActive("Contact")} className={`text-white text-base font-medium hover:text-gray-300 transition duration-300 ease-in-out ${active === "Contact" ? "text-indigo-400" : ""}`}>
+          <Link href="/contact" onClick={() => setActive("Contact")} className={`text-indigo-400 text-base font-medium hover:text-grey-300 transition duration-300 ease-in-out ${active === "Contact" ? "text--400" : ""}`}>
             Contact
           </Link>
         </MenuItem>
