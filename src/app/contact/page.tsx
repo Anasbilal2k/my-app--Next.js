@@ -33,7 +33,7 @@ export default function Contact() {
           
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-              Message
+              message
             </label>
             <textarea
               id="message"
