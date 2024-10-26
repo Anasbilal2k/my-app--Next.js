@@ -1,40 +1,38 @@
 "use client";
-import React, { useState } from "react";
-import { Menu, MenuItem } from "./ui/Navbar-menu"; // Ensure correct path and case
+
+import { HoveredLink, Menu, MenuItem } from './ui/Navbar-menu';
 import { cn } from "@/lib/utils";
+import React, { useState } from "react";
 import Link from "next/link";
 
-function Navbar({ className }: { className?: string }): JSX.Element {
+function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
-
   return (
-    <div className={cn("fixed top-10 inset-x-0 z-50 max-w-md mx-auto bg-gradient-to-r from-black to-gray-800 p-2 py-1 rounded-lg shadow-sm", className)}>
+    <div
+    className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
       <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Home">
-          <Link href="/" onClick={() => setActive("Home")} className={`text-white text-base font-medium hover:text-gray-300 transition duration-300 ease-in-out ${active === "Home" ? "text-indigo-400" : ""}`}>
-            Home
-          </Link>
-        </MenuItem>
+        <Link href={'/'}>
+        <MenuItem setActive={setActive} active={active}item='Home'></MenuItem>
+        </Link>
+        <MenuItem setActive={setActive} active={active}item='Courses'>
+        <div className='flex flex-col space-y-4'>
 
-        <MenuItem setActive={setActive} active={active} item="Our Courses">
-          <Link href="/courses" onClick={() => setActive("Our Courses")} className={`text-white text-base font-medium hover:text-gray-300 transition duration-300 ease-in-out ${active === "Our Courses" ? "text-indigo-400" : ""}`}>
-            Our Courses
-          </Link>
-          <div className="mt-1 space-y-1 text-sm text-gray-300">
-            <Link href="/courses/content-marketing" className="hover:text-indigo-400">Content Marketing</Link>
-            <Link href="/courses/ai" className="hover:text-indigo-400">Generative AI</Link>
-            <Link href="/courses/nextjs" className="hover:text-indigo-400">Next.js</Link>
-          </div>
-        </MenuItem>
+        <HoveredLink href="/courses">All courses</HoveredLink>
+        <HoveredLink href="/courses">Basic Music</HoveredLink>
+        <HoveredLink href="/courses">Advance Composition</HoveredLink>
+        <HoveredLink href="/courses">Song Writting</HoveredLink>
+        <HoveredLink href="/courses">Music Production</HoveredLink>
 
-        <MenuItem setActive={setActive} active={active} item="Contact">
-          <Link href="/contact" onClick={() => setActive("Contact")} className={`text-indigo-400 text-base font-medium hover:text-grey-300 transition duration-300 ease-in-out ${active === "Contact" ? "text--400" : ""}`}>
-            Contact
-          </Link>
+        </div>
+  
         </MenuItem>
+        <Link href={'/contact'}>
+        <MenuItem setActive={setActive} active={active}item='Contact us'></MenuItem>
+        </Link>
+
       </Menu>
-    </div>
-  );
+    </div> 
+  )
 }
 
-export default Navbar;
+export default Navbar
