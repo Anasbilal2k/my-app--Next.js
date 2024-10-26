@@ -5,10 +5,10 @@ function Footer() {
           {/* Contact Us Column */}
           <div>
             <h3 className="hover:text-white font-bold text-lg mb-4">Contact Us</h3>
-            <p className="text-sm">123 Main St,</p>
+            <p className="text-sm"> Main St,</p>
             <p className="text-sm">Rahim Yar Khan, 64200</p>
             <p className="text-sm">Phone: (123) 456-7890</p>
-            <p className="text-sm">Email: info@example.com</p>
+            <p className="text-sm">Email: anasbilal@gmail.com</p>
           </div>
   
           {/* About Us Column */}
